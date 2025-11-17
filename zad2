@@ -1,0 +1,18 @@
+def sortuj_zadania(lista):
+    priorytet = {"wysoki": 0, "średni": 1, "niski": 2}
+    return sorted(lista, key=lambda z: priorytet[z["priorytet"]])
+
+
+# przykładowe zadania
+zadania = [
+    {"nazwa": "A", "priorytet": "średni"},
+    {"nazwa": "B", "priorytet": "wysoki"},
+    {"nazwa": "C", "priorytet": "niski"}
+]
+
+komenda = input("Wpisz komendę: ")
+
+if komenda == "sort":
+    for z in sortuj_zadania(zadania):
+        print(z)
+
